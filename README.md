@@ -42,6 +42,8 @@ The Llama-3-8B model is easily deployable on HuggingFace with configurable GPUs,
 
 Both python `inference.py` and JavaScript (`inference.mjs`) example files are provided, note, both the endpoint URL and the API Key are important secrets. 
 
+see `query-model/` for the full code.
+
 The mjs file can be run via `node` for simple local testing. In either instance, the OpenAI package is used to benefit from interacting with the model via a multi-message scheme making it easier to activate certain weights in the tuning layer. Here for example is the system instruction (notice both the first `system` and the first `user` message match the `training-files/`).
 
 Note: A large single model can be trained across different instructions within the same domain to benefit from cross-pollination of weights, while still having key use cases be narrowly accessible through specific system instructions from the tuning. 
